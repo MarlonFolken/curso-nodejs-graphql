@@ -6,7 +6,7 @@ services:
     environment:
       - POSTGRES_DB=my_store
       - POSTGRES_USER=nico
-      - POSTGRES_PASSWORD=admin123
+      - POSTGRES_PASSWORD=8jN9kdfff8p888wxaT
     ports:
       - 5432:5432
     volumes:
