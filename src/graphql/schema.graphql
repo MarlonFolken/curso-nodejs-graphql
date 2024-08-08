@@ -19,4 +19,37 @@ type Product {
   description: String!
   image: String!
   createdAt: String!
+  categoryId: ID!
+  category: Category!
+}
+
+type Category {
+  id: ID!
+  name: String!
+  image: String!
+}
+
+# type Mutation, to modify information.
+# addProduct, to add a new product.
+type Mutation {
+  addProduct(dataTransferObject: CreateProductInput): Product
+  updateProduct(id: ID!, dataTransferObject: UpdateProductInput): Product
+  deleteProduct(id: ID!): ID
+}
+
+# CreateProductInput, to define the input data for the addProduct mutation.
+input CreateProductInput {
+  name: String!
+  price: Int!
+  description: String!
+  image: String!
+  categoryId: ID!
+}
+
+input UpdateProductInput {
+  name: String
+  price: Int
+  description: String
+  image: String
+  categoryId: ID
 }
